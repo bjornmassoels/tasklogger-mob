@@ -1,0 +1,7 @@
+{
+  "name": "tasklogger-mobile",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
