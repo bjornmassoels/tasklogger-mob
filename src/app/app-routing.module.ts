@@ -1,16 +1,48 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import {AutoLoginComponent} from "./auto-login/auto-login.component";
+import {AuthGuardService} from "./services/auth-guard.service";
 
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    canActivate: [AuthGuardService],
+    loadChildren: () =>
+      import('./home/home.module').then((m) => m.HomePageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () =>
+      import('./login/login.module').then((m) => m.LoginModule)
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'auto-login',
     pathMatch: 'full'
   },
+  {
+    path: 'register',
+    loadChildren: () =>
+      import('./register/register.module').then((m) => m.RegisterModule)
+  },
+  {
+    path: 'forgot-password',
+    loadChildren: () =>
+      import('./forgot-password/forgot-password.module').then(
+        (m) => m.ForgotPasswordPageModule
+      )
+  },
+  {
+    path: 'auth/recover-password/:code/:id',
+    loadChildren: () =>
+      import('./recover-password/recover-password.module').then(
+        (m) => m.RecoverPasswordPageModule
+      )
+  },
+  {
+    path: 'auto-login',
+    component: AutoLoginComponent
+  }
 ];
 
 @NgModule({

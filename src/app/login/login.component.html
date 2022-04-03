@@ -1,0 +1,18 @@
+<div id="scroll" #scroll>
+  <img src="../../assets/welkom.PNG" id="logo">
+  <form class="outerContainer" [formGroup]="loginForm" id="container" #container>
+    <p class="text">EMAIL of GEBRUIKERSNAAM</p>
+    <input tabindex="1" placeholder=" Email" formControlName="email" class="inputBox" type="email" [(ngModel)]="email"
+      (click)="scrollToBottom()" />
+    <p class="text">WACHTWOORD</p>
+    <input tabindex="2" placeholder=" Wachtwoord" formControlName="password" class="inputBox" type="password"
+      [(ngModel)]="password" />
+    <button tabindex="3" (click)="login(loginForm.value)" class="cupid-blue">LOGIN</button>
+    <p (click)="goToRegister()" class="forgot">Nog geen account? Maak er één aan!</p>
+    <p (click)="goToForgotPassword()" class="forgot">Wachtwoord vergeten?</p>
+  </form>
+  <div style="display:inline-block;height:50vh; min-height:50vh; background-color: white">
+    <!-- <h1 style="position: absolute; bottom:0">g</h1> -->
+  </div>
+</div>
+  

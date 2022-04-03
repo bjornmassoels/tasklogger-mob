@@ -1,0 +1,6 @@
+<div>
+    <ion-spinner class="spinner" name="lines"></ion-spinner>
+    <img src="assets/selux_transparant.png" class="image">
+    <h2 *ngIf="formService.isAutoLogin && hasInternetConnection" class="title">Automatisch inloggen</h2>
+    <h2 *ngIf="!hasInternetConnection" class="title">Geen internet verbinding</h2>
+</div>

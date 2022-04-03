@@ -1,0 +1,41 @@
+<input (click)="presentAlert()" [ngClass]="innerHeight > 640 ? 'backButtonLarge' : 'backButton'" type="button" value="EXIT">
+<form class="overflower" [formGroup]="registerForm">
+  <p class="title">Registratie Formulier</p>
+  <div class="container">
+    <div class="rowFlex">
+      <p class="texter">Achternaam:</p>
+      <input tabindex="1" type="text" formControlName="achternaam" class="input" placeholder="Achternaam ...">
+    </div>
+    <div class="rowFlex">
+      <p class="texter">Voornaam:</p>
+      <input tabindex="2" class="input" formControlName="voornaam" placeholder="Voornaam ..."/>
+    </div>
+    <div class="rowFlex">
+      <p class="texter">Gebruikersnaam:</p>
+      <input tabindex="3" class="input" formControlName="gebruikersnaam" placeholder="Gebruikersnaam ..."/>
+    </div>
+    <div class="rowFlex">
+      <p class="texter">Wachtwoord:</p>
+      <input tabindex="4" class="input" type="password" formControlName="password" placeholder="Wachtwoord ..." />
+    </div>
+    <div class="rowFlex">
+      <p class="texter">Herhaal wachtwoord:</p>
+      <input tabindex="5" class="input" type="password" formControlName="password2" placeholder="Wachtwoord ..." />
+    </div>
+    <div class="rowFlex">
+      <p class="texter">Code:</p>
+      <input tabindex="11" class="input" formControlName="code" placeholder="Vul code in ..."/>
+    </div>
+    <div class="rowFlex">
+      <p class="texter">Email:</p>
+      <input tabindex="12" class="input" formControlName="email" placeholder="Vul Email in ..."/>
+    </div>
+  </div>
+  <div class="register-button">
+    <button tabindex="13" (click)="submitter(registerForm.value)">
+      klik om te registreren!
+    </button>
+  </div>
+
+</form>
+

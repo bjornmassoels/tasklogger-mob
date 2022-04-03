@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiURL: "http://localhost:4100/api/"
+  // apiURL: "https://selux-admin-dev.herokuapp.com/api/",   //
+
 };
 
 /*

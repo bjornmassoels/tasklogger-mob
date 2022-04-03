@@ -1,0 +1,187 @@
+.rowFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 20px;
+  align-items: center;
+}
+.overflower{
+  width: 100%;
+  margin-top: 50px;
+  height: calc(100% - 55px);
+  overflow-y: auto;
+}
+.backButtonLarge{
+  position: absolute;
+  top:8px;
+  left:30px;
+  margin-right: 10px;
+  color: white;
+  height: 35px;
+  width: 70px;
+  text-align: center;
+  background-color: black;
+  border:1px solid  black;
+  border-radius: 4px;
+}
+input {
+  border: 1px lightgray;
+  text-align: center;
+  height: 35px;
+  height: 35px;
+  width: 50vw;
+  background-color: rgba(#97b2fd, 0.2);
+  border-radius: 5px;
+  color: #5f5f5f;
+}
+::placeholder {
+  color: #5f5f5f;
+  opacity: 0.5;
+}
+.overflower::-webkit-scrollbar,
+.overflower::-webkit-scrollbar-thumb {
+  width: 15px;
+  border-radius: 13px;
+  background-clip: padding-box;
+  border: 6px solid transparent;
+}
+
+.overflower::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 0 10px;
+}
+
+.overflower:hover {
+  color: black;
+}
+.backButton{
+  position: absolute;
+  top:6px;
+  left:30px;
+  margin-right: 10px;
+  color: white;
+  height: 30px;
+  width: 70px;
+  background-color: black;
+  border:1px solid  black;
+  border-radius: 4px;
+}
+.item {
+  margin: 0 10px;
+}
+
+.title {
+  display: flex;
+  font-size: 22px;
+  font-weight: 600;
+  justify-content: center;
+  margin-bottom: 0px;
+  align-items: center;
+  height: 50px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.witteText {
+  color: white;
+  margin-left: 25px;
+}
+.flexer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.image {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.register-button {
+  width: 80%;
+  height: 7%;
+  margin: 30px auto 10px auto;
+}
+
+button {
+  background-color: #393939;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  font-size: medium;
+}
+
+@media only screen and (max-width: 600px) and (max-height: 350px){
+  .rowFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 10px;
+    align-items: center;
+    height: 2.5rem;
+  }
+  input {
+    border: 1px lightgray;
+    text-align: center;
+    height: 35px;
+    background-color: rgba(#97b2fd, 0.2);
+    border-radius: 5px;
+    width: 30vw;
+    color: #5f5f5f;
+  }
+  ::placeholder {
+    color: #5f5f5f;
+    opacity: 0.5;
+  }
+
+  .item {
+    margin: 0 100px;
+  }
+
+  .title {
+    display: flex;
+    margin-bottom: 0;
+    font-size: 22px;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .witteText {
+    color: white;
+    margin-left: 25px;
+  }
+  .flexer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .image {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .register-button {
+    width: 80%;
+    height: 7%;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  button {
+    background-color: #393939;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    font-size: medium;
+  }
+}
